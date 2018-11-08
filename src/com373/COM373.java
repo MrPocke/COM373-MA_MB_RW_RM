@@ -9,12 +9,13 @@ package com373;
  *
  * @author B00731185
  */
-public class COM373 {
-
+public class COM373 
+{
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         // TODO code application logic here
     }
     

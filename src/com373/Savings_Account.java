@@ -7,16 +7,9 @@ package com373;
 
 /**
  *
- * @author Mac
+ * @author B00731185
  */
-public class Accounts 
+public class Savings_Account 
 {
-    float deposit;
-    float withdrawals;
     
-    public Accounts (float credits, float debits)
-    {
-        
-    }
 }
-
