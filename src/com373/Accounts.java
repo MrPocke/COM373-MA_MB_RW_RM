@@ -9,14 +9,23 @@ package com373;
  *
  * @author Mac
  */
-public class Accounts 
+public abstract class Accounts 
 {
+    float amount;
     float deposit;
-    float withdrawals;
+    float withdrawal;
     
-    public Accounts (float credits, float debits)
+    public void createDeposit(float dep)
     {
-        
+        deposit = dep;
+        amount += deposit;
+        deposit = 0;
+    }
+    public void createWithdrawal(float wit)
+    {
+        withdrawal = wit;
+        amount -= withdrawal;
+        withdrawal = 0;
     }
 }
 

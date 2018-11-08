@@ -9,7 +9,7 @@ package com373;
  *
  * @author B00731185
  */
-public class Current_Account 
+public class Current_Account extends Accounts
 {
     
 }
