@@ -5,11 +5,38 @@
  */
 package com373;
 
+import java.util.concurrent.ThreadLocalRandom;
 /**
  *
  * @author B00731185
  */
 public class Current_Account extends Accounts
 {
+    final int min = 100;
+    final int max = 2000;
+    
+    public void getAmount(float gAmount)
+    {
+        this.accountTotal = gAmount;
+    }
+    public void getDeposit(float gDeposit)
+    {
+        this.deposit = gDeposit;
+    }
+    public void getWithdrawal(float gWithdrawal)
+    {
+        this.withdrawal = gWithdrawal;
+    }
+    public void ranCurrentAccountDeposit()
+    {  
+        float random = ThreadLocalRandom.current().nextInt(min, max );
+        createDeposit(random);
+    }
+    public void ranCurrentAccountWithdrawal(float amount)
+    {
+        float random = ThreadLocalRandom.current().nextInt(min, max );
+        createWithdrawal(random);
+        //come back to this, account can't go below -1000
+    }
     
 }

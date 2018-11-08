@@ -5,27 +5,41 @@
  */
 package com373;
 
+
 /**
  *
  * @author Mac
  */
-public abstract class Accounts 
+public abstract class Accounts extends COM373
 {
-    float amount;
+    float accountTotal;
     float deposit;
     float withdrawal;
+    int mounth;
     
     public void createDeposit(float dep)
     {
         deposit = dep;
-        amount += deposit;
+        accountTotal += deposit;
         deposit = 0;
     }
     public void createWithdrawal(float wit)
     {
         withdrawal = wit;
-        amount -= withdrawal;
+        accountTotal -= withdrawal;
         withdrawal = 0;
     }
+    public void createAccount(float amo)
+    {
+        if(amo <1)
+        {
+            accountTotal = amo;
+        }
+        else
+        {
+            //gui throw up box saying "account cannot start on 0"
+        }
+    }
+    
 }
 

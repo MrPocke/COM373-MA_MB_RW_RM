@@ -11,5 +11,16 @@ package com373;
  */
 public class Savings_Account extends Accounts
 {
-    
+    public void getAmount(float gAmount)
+    {
+        this.accountTotal = gAmount;
+    }
+    public void getDeposit(float gDeposit)
+    {
+        this.deposit = gDeposit;
+    }
+    public void getWithdrawal(float gWithdrawal)
+    {
+        this.withdrawal = gWithdrawal;
+    }
 }
