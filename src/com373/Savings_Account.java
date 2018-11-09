@@ -15,18 +15,31 @@ public class Savings_Account extends Accounts
 {
     final int min = 100;
     final int max = 2000;
+    int counter = 0;
     
-    public void getAmount(float gAmount)
+    public float getAmount()
     {
-        this.accountTotal = gAmount;
+        return this.accountTotal;
     }
-    public void getDeposit(float gDeposit)
+    public float getDeposit()
     {
-        this.deposit = gDeposit;
+        return this.deposit;
     }
-    public void getWithdrawal(float gWithdrawal)
+    public float getWithdrawal()
     {
-        this.withdrawal = gWithdrawal;
+        return this.withdrawal;
+    }
+    public void setAmount(float sAmount)
+    {
+        this.accountTotal = sAmount;
+    }
+    public void setDeposit(float sDeposit)
+    {
+        this.deposit = sDeposit;
+    }
+    public void setWithdrawal(float sWithdrawal)
+    {
+        this.withdrawal = sWithdrawal;
     }
     public void ranSavingsAccountDeposit()
     {  
@@ -47,8 +60,40 @@ public class Savings_Account extends Accounts
         }                
         else
         {
-            //gui throw up box saying "account cannot start less than 1"
+            //gui throw up box saying "account cannot start less than 100"
             //then set text to blank  and not enter the amo to accountTotal
+        }
+    }
+    @Override public void createWithdrawal(float wit)
+    {
+        while(Mounth < 13)
+        {
+            if(counter !=3)
+            {
+                if(accountTotal - wit >= 100)
+                {
+                    withdrawal = wit;
+                    accountTotal -= withdrawal;
+                    withdrawal = 0;
+                    counter++;
+                }
+                else
+                {   
+                //pop-up message saying accountTotal can't go below -1000
+                }
+            }
+            else
+            {
+                //pop-up no more than two withdrawals from a savings account per year
+            }
+        }
+        counter = 0;
+    }
+    public void interest()
+    {
+        if(Mounth == 12)
+        {
+         accountTotal *= 1.03;
         }
     }
 }

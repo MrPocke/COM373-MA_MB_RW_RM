@@ -15,17 +15,30 @@ public class Current_Account extends Accounts
     final int min = 100;
     final int max = 2000;
     
-    public void getAmount(float gAmount)
+    
+    public float getAmount()
     {
-        this.accountTotal = gAmount;
+        return this.accountTotal;
     }
-    public void getDeposit(float gDeposit)
+    public float getDeposit()
     {
-        this.deposit = gDeposit;
+        return this.deposit;
     }
-    public void getWithdrawal(float gWithdrawal)
+    public float getWithdrawal()
     {
-        this.withdrawal = gWithdrawal;
+        return this.withdrawal;
+    }
+    public void setAmount(float sAmount)
+    {
+        this.accountTotal = sAmount;
+    }
+    public void setDeposit(float sDeposit)
+    {
+        this.deposit = sDeposit;
+    }
+    public void setWithdrawal(float sWithdrawal)
+    {
+        this.withdrawal = sWithdrawal;
     }
     public void ranCurrentAccountDeposit()
     {  
@@ -50,5 +63,28 @@ public class Current_Account extends Accounts
             //then set text to blank  and not enter the amo to accountTotal
         }
     }
-    
+    @Override public void createDeposit(float dep)
+    {
+        if(dep >= 500)
+        {
+        dep += 10;
+        }
+        deposit = dep;
+        accountTotal += deposit;
+        deposit = 0;
+    }
+    @Override public void createWithdrawal(float wit)
+    {
+        //check this 
+        if(accountTotal - wit >= -1000)
+        {
+        withdrawal = wit;
+        accountTotal -= withdrawal;
+        withdrawal = 0; 
+        }
+        else
+        {
+         //pop-up message saying accountTotal can't go below -1000
+        }
+    }
 }

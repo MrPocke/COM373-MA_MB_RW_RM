@@ -23,7 +23,18 @@ public class COM373
         {
             public void run()
             {
-                Mounth++;
+                
+                //the monthly random deposits and withdrawals should rely on the Mounth variable changing NOT the actual Value of the Mounth variable 
+                do
+                {
+                   while(Mounth <= 12)
+                    {
+                    Mounth++;                 
+                    }
+                    Mounth = 1; 
+                }
+                //link this to exit button NOT being clicked
+                
             }
         };
         long delay  = 5000;
