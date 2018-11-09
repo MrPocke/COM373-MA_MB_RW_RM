@@ -13,7 +13,7 @@ import java.util.TimerTask;
  */
 public class COM373 
 {
-    public static int Mounth;
+    public static int Mounth = 1;
     /**
      * @param args the command line arguments
      */

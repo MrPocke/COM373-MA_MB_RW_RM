@@ -32,11 +32,23 @@ public class Current_Account extends Accounts
         float random = ThreadLocalRandom.current().nextInt(min, max );
         createDeposit(random);
     }
-    public void ranCurrentAccountWithdrawal(float amount)
+    public void ranCurrentAccountWithdrawal()
     {
         float random = ThreadLocalRandom.current().nextInt(min, max );
         createWithdrawal(random);
         //come back to this, account can't go below -1000
+    }
+    @Override public void createAccount(float amo) 
+    {               
+        if(amo >= 1)
+        {
+            accountTotal = amo;                
+        }                
+        else
+        {
+            //gui throw up box saying "account cannot start less than 1"
+            //then set text to blank  and not enter the amo to accountTotal
+        }
     }
     
 }

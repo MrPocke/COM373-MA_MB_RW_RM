@@ -15,7 +15,6 @@ public abstract class Accounts extends COM373
     float accountTotal;
     float deposit;
     float withdrawal;
-    int mounth;
     
     public void createDeposit(float dep)
     {
@@ -30,16 +29,9 @@ public abstract class Accounts extends COM373
         withdrawal = 0;
     }
     public void createAccount(float amo)
-    {
-        if(amo <1)
-        {
-            accountTotal = amo;
-        }
-        else
-        {
-            //gui throw up box saying "account cannot start on 0"
-        }
-    }
-    
+    {     
+            accountTotal = amo;    
+            //gui throw up box saying "account cannot start on 0"       
+    }   
 }
 
