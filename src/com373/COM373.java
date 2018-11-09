@@ -30,7 +30,6 @@ public class COM373
         long period = 0;
         Timer timer = new Timer("Timer");
         timer.scheduleAtFixedRate(repeatedTask, delay, period);
-        // TODO code application logic here
-        
+        // TODO code application logic here    
     }
 }
